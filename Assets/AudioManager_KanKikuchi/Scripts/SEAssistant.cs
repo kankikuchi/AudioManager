@@ -11,10 +11,9 @@ public class SEAssistant : AudioAssistant {
   //ループ再生するか
   [SerializeField]
   private bool _isLoop = false;
-
   public bool IsLoop {
-    get => _isLoop;
-    set => _isLoop = value;
+    get { return _isLoop; }
+    set { _isLoop = value; }
   }
 
   //=================================================================================

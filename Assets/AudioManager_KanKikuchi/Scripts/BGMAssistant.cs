@@ -14,17 +14,16 @@ public class BGMAssistant : AudioAssistant {
   private float _fadeOutDuration = 0;
 
   public float FadeOutDuration {
-    get => _fadeOutDuration;
-    set => _fadeOutDuration = value;
+    get { return _fadeOutDuration; }
+    set { _fadeOutDuration = value; }
   }
 
   //ループ再生するか
   [SerializeField]
   private bool _isLoop = true;
-
   public bool IsLoop {
-    get => _isLoop;
-    set => _isLoop = value;
+    get { return _isLoop; }
+    set { _isLoop = value; }
   }
 
   //再生を自動で停止するか
@@ -32,8 +31,8 @@ public class BGMAssistant : AudioAssistant {
   private bool _isAutoStop = true;
 
   public bool IsAutoStop {
-    get => _isAutoStop;
-    set => _isAutoStop = value;
+    get { return _isAutoStop; }
+    set { _isAutoStop = value; }
   }
 
   //=================================================================================
