@@ -26,9 +26,7 @@ public class AudioPostProcessor : AssetPostprocessor {
     var targetBGMPathList = new List<string>();
     var targetSEPathList  = new List<string>();
 
-    foreach (var importedAssetPath in importedAssets) {
-      var path = importedAssetPath.Replace("\\", "/");
-      
+    foreach (var path in importedAssets) {
       if (path.Contains(bgmDirectoryPath)) {
         targetBGMPathList.Add(path);
       }
@@ -37,9 +35,7 @@ public class AudioPostProcessor : AssetPostprocessor {
       }
     }
     
-    foreach (var movedAssetPath in movedAssets) {
-      var path = movedAssetPath.Replace("\\", "/");
-      
+    foreach (var path in movedAssets) {
       if (path.Contains(bgmDirectoryPath) && !targetBGMPathList.Contains(path)) {
         targetBGMPathList.Add(path);
       }

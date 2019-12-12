@@ -27,11 +27,8 @@ public class AudioPathCreator : AssetPostprocessor {
 			return;
 		}
 		
-		List<List<string>> assetsList = new List<List<string>>() {
-			importedAssets.Select(path => path.Replace("\\", "/")).ToList(), 
-			deletedAssets.Select(path => path.Replace("\\", "/")).ToList(), 
-			movedAssets.Select(path => path.Replace("\\", "/")).ToList(), 
-			movedFromAssetPaths.Select(path => path.Replace("\\", "/")).ToList(), 
+		List<string[]> assetsList = new List<string[]>() {
+			importedAssets, deletedAssets, movedAssets, movedFromAssetPaths
 		};
 
 		if (ExistsPathInAssets(assetsList, BGM_DIRECTORY_PATH)) {
@@ -44,7 +41,7 @@ public class AudioPathCreator : AssetPostprocessor {
 	}
 
 	//入力されたassetsのパスの中に、指定したパスが含まれるものが一つでもあるか
-	private static bool ExistsPathInAssets(List<List<string>> assetPathsList, string targetPath) {
+	private static bool ExistsPathInAssets(List<string[]> assetPathsList, string targetPath) {
 		return assetPathsList
 			.Any(assetPaths => assetPaths
 				.Any(assetPath => assetPath
