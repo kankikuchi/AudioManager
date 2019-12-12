@@ -71,7 +71,7 @@ public class AudioPostProcessor : AssetPostprocessor {
     string selfPath = Directory.GetFiles("Assets", "*", System.IO.SearchOption.AllDirectories).FirstOrDefault(path => System.IO.Path.GetFileName(path) == selfFileName);
     
     var editorIndex = selfPath.LastIndexOf("Editor");
-    return selfPath.Substring(0, editorIndex);
+    return selfPath.Substring(0, editorIndex).Replace("\\", "/");
   }
   
   //=================================================================================
