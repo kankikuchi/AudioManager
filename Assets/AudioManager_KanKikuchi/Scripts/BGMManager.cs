@@ -24,7 +24,7 @@ public class BGMManager : AudioManager<BGMManager> {
   [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
   static void Initialize(){
     if (AudioManagerSetting.Entity.IsAutoGenerateBGMManager) {
-      var bgmManager = new GameObject("BGMManager", typeof(BGMManager));
+      new GameObject("BGMManager", typeof(BGMManager));
     }
   }
   

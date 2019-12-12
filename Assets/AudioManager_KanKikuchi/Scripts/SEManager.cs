@@ -26,7 +26,7 @@ public class SEManager : AudioManager<SEManager> {
   [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
   static void Initialize(){
     if (AudioManagerSetting.Entity.IsAutoGenerateSEManager) {
-      var seManager = new GameObject("SEManager", typeof(SEManager));
+      new GameObject("SEManager", typeof(SEManager));
     }
   }
   
