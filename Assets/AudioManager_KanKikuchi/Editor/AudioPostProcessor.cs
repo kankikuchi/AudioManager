@@ -56,12 +56,12 @@ public class AudioPostProcessor : AssetPostprocessor {
   
   //対象のBGMが入ってるディレクトリへのパスを取得
   private static string GetBGMDirectoryPath() {
-    return GetTopDirectoryPath() + "/" + AudioPathCreator.BGM_DIRECTORY_PATH;
+    return GetTopDirectoryPath() + AudioPathCreator.BGM_DIRECTORY_PATH;
   }
   
   //対象のSEが入ってるディレクトリへのパスを取得
   private static string GetSEDirectoryPath() {
-    return GetTopDirectoryPath() + "/" + AudioPathCreator.SE_DIRECTORY_PATH;
+    return GetTopDirectoryPath() + AudioPathCreator.SE_DIRECTORY_PATH;
   }
 
   //対象のが入ってるディレクトリへのパスを取得
