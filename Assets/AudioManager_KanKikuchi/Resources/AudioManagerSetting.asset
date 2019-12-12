@@ -26,3 +26,21 @@ MonoBehaviour:
   _seCacheType: 1
   _isReleaseBGMCache: 1
   _isReleaseSECache: 1
+  _isAutoUpdateBGMSetting: 1
+  _isAutoUpdateSESetting: 1
+  _forceToMonoForBGM: 1
+  _forceToMonoForSE: 1
+  _normalizeForBGM: 1
+  _normalizeForSE: 1
+  _ambisonicForBGM: 0
+  _ambisonicForSE: 0
+  _loadInBackgroundForBGM: 0
+  _loadInBackgroundForSE: 0
+  _loadTypeForBGM: 2
+  _loadTypeForSE: 1
+  _qualityForBGM: 0.3
+  _qualityForSE: 0.3
+  _compressionFormatForBGM: 1
+  _compressionFormatForSE: 1
+  _sampleRateSettingForBGM: 1
+  _sampleRateSettingForSE: 1
