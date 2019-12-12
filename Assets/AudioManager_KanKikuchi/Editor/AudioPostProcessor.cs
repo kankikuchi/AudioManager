@@ -20,6 +20,11 @@ public class AudioPostProcessor : AssetPostprocessor {
 
   //オーディオファイルが入ってるディレクトリが変更されたら、自動で各スクリプトを作成
   private static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths) {
+    //UnityPackageで最初にインポートした時はまだnullなのでその時用
+    if (AudioManagerSetting.Entity == null) {
+      return;
+    }
+    
     string bgmDirectoryPath = GetBGMDirectoryPath(), seDirectoryPath = GetSEDirectoryPath();
     
     //対象のディレクトのファイルがあるかチェック

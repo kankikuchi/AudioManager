@@ -23,7 +23,8 @@ public class AudioPathCreator : AssetPostprocessor {
 
 	//オーディオファイルが入ってるディレクトリが変更されたら、自動で各スクリプトを作成
 	private static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths) {
-		if (!AudioManagerSetting.Entity.IsAutoUpdateAudioPath) {
+		//UnityPackageで最初にインポートした時はEntityがまだnull
+		if (AudioManagerSetting.Entity == null || !AudioManagerSetting.Entity.IsAutoUpdateAudioPath) {
 			return;
 		}
 		
