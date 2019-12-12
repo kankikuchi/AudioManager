@@ -13,7 +13,7 @@ using System.Linq;
 public class AudioPathCreator : AssetPostprocessor {
 
 	//オーディオファイルが入ってるディレクトリへのパス
-	public static readonly string BGM_DIRECTORY_PATH = Path.Combine("Resources", BGMManager.AUDIO_DIRECTORY_PATH), SE_DIRECTORY_PATH = Path.Combine("Resources", SEManager.AUDIO_DIRECTORY_PATH);
+	public static readonly string BGM_DIRECTORY_PATH = "Resources/" + BGMManager.AUDIO_DIRECTORY_PATH, SE_DIRECTORY_PATH = "Resources/" + SEManager.AUDIO_DIRECTORY_PATH;
 
 	//=================================================================================
 	//変更の監視
