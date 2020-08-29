@@ -49,8 +49,12 @@ public class AudioPostProcessor : AssetPostprocessor {
       }
     }
 
-    targetBGMPathList.ForEach(ChangeBGMSetting);
-    targetSEPathList.ForEach(ChangeSESetting);
+    if (AudioManagerSetting.Entity.IsAutoUpdateBGMSetting) {
+      targetBGMPathList.ForEach(ChangeBGMSetting);
+    }
+    if (AudioManagerSetting.Entity.IsAutoUpdateSESetting) {
+      targetSEPathList.ForEach(ChangeSESetting);
+    }
   }
 
   #endif
