@@ -238,7 +238,7 @@ public abstract class AudioManager<T> : SingletonMonoBehaviour<T> where T : Mono
 	/// </summary>
 	public void Pause(string audioPathOrName) {
 		var audioName = PathToName(audioPathOrName);
-		_audioPlayerList.ForEach(player => player.UnPause(audioName));
+		_audioPlayerList.ForEach(player => player.Pause(audioName));
 	}
 
 	/// <summary>
