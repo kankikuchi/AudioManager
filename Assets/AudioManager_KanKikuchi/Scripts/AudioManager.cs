@@ -263,5 +263,24 @@ public abstract class AudioManager<T> : SingletonMonoBehaviour<T> where T : Mono
 		_audioPlayerList.ForEach(player => player.UnPause());
 	}
 
+	//=================================================================================
+	//ミュート
+	//=================================================================================
+
+	/// <summary>
+	/// ミュート
+	/// </summary>
+	public void Mute()
+	{
+		_audioPlayerList.ForEach(player => player.Mute());
+	}
+
+	/// <summary>
+	/// ミュート解除
+	/// </summary>
+	public void UnMute()
+	{
+		_audioPlayerList.ForEach(player => player.UnMute());
+	}
 }
 }
