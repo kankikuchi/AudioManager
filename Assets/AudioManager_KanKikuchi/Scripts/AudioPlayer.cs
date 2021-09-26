@@ -295,6 +295,25 @@ public class AudioPlayer {
     }
   }
 
+  //=================================================================================
+  //ミュート
+  //=================================================================================
+  
+  /// <summary>
+  /// ミュート
+  /// </summary>
+  public void Mute()
+  {
+    _audioSource.mute = true;
+  }
+
+  /// <summary>
+  /// ミュート解除
+  /// </summary>
+  public void UnMute()
+  {
+    _audioSource.mute = false;
+  }
 }
 
 }

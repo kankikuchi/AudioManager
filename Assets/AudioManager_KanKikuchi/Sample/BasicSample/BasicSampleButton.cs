@@ -97,6 +97,24 @@ public class BasicSampleButton : MonoBehaviour {
       Debug.Log("BGMフェードイン終了");
     });
   }
+
+  /// <summary>
+  /// BGMをミュートする
+  /// </summary>
+  public void MuteBGM()
+  {
+    Debug.Log("BGMミュート");
+    BGMManager.Instance.Mute();
+  }
+
+  /// <summary>
+  /// BGMをミュート解除する
+  /// </summary>
+  public void UnMuteBGM()
+  {
+    Debug.Log("BGMミュート解除");
+    BGMManager.Instance.UnMute();;
+  }
   
   //=================================================================================
   //SE
@@ -152,4 +170,21 @@ public class BasicSampleButton : MonoBehaviour {
     SEManager.Instance.UnPause();
   }
   
+  /// <summary>
+  /// BGMをミュートする
+  /// </summary>
+  public void MuteSE()
+  {
+    Debug.Log("SEミュート");
+    SEManager.Instance.Mute();
+  }
+
+  /// <summary>
+  /// BGMをミュート解除する
+  /// </summary>
+  public void UnMuteSE()
+  {
+    Debug.Log("SEミュート解除");
+    SEManager.Instance.UnMute();;
+  }
 }
